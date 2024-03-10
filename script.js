@@ -20,3 +20,38 @@ let tasks = [];
 
 const taskForm = document.getElementById('taskForm');
 const taskTable = document.getElementById('taskTable');
+
+
+// Function to handle form submissions
+function handleSubmission(event) { 
+    event.preventDefault();
+    // TODO: Get form input values
+    const taskNameInput = document.getElementById('taskName');
+    const taskDescriptionInput = document.getElementById('taskDescription');
+    const taskDeadlineInput = document.getElementById('taskDeadline');
+    // TODO: Validate input fields
+    const taskName = taskNameInput.value;
+    const taskDescription = taskDescriptionInput.value;
+    const taskDeadline = taskDeadlineInput.value;
+
+     // Validate input fields
+     if (taskName.trim() === '') {
+        alert('Task name and deadline are required!');
+        return;
+    }
+
+    // TODO: Update the tasks array
+    tasks.push({ name: taskName, description: taskDescription, deadline: taskDeadline });
+    render();
+}
+
+
+
+// Function to render tasks in the table
+function render() {
+    // TODO: Use array methods to create a new table row of data for each item in the ar
+}
+// Function to initialize the table
+function init() {
+taskTable.innerHTML = ''; // Clear the table tasks = []; // Reset the tasks array render(); // Call the render function
+}
