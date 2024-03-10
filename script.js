@@ -61,3 +61,9 @@ function render() {
 function init() {
 taskTable.innerHTML = ''; // Clear the table tasks = []; // Reset the tasks array render(); // Call the render function
 }
+
+// Event listener for form submission
+taskForm.addEventListener('submit', handleSubmission);
+
+// Call the init function to set up the initial state of the app
+init();
